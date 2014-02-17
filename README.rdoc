@@ -6,7 +6,7 @@ keep this up in case anyone wants to poke at it.
 
 == Rubylight
 
-This is a simple implementation of Lokesh Dhakar's Lightbox 2,( http://lokeshdhakar.com/projects/lightbox2/ ) current with version 2.51. 
+This is a simple implementation of Lokesh Dhakar's Lightbox 2,( http://lokeshdhakar.com/projects/lightbox2/ ) current with version 2.6.
 Its purpose is to simply make setup and use of Lightbox 2 easier for Rails users.
 
 = Installation and Setup

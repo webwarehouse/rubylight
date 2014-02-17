@@ -1,20 +1,20 @@
 module Rubylight
   module LightHelpers
     def lightbox_tag thumb, pic, title=nil, collection=nil, html_options = {}
-      rel = "lightbox"
+      basename = File.basename(pic, ".*")
       if collection
         rel << "[#{collection}]"
       end
-      html_options.merge!({:rel => rel, :title => title})
-      link_to(image_tag(thumb), pic, html_options)
+      html_options.merge!({:title => title,  'data-lightbox' => pic})
+      link_to(image_tag(thumb), pic, html_options,)
     end
 
     def lightbox_tag thumb, url_options = {}, title=nil, collection=nil, html_options = {}
-      rel = "lightbox"
+      basename = File.basename(url_options, ".*")
       if collection
         rel << "[#{collection}]"
       end
-      html_options.merge!({:rel => rel, :title => title})
+      html_options.merge!({:title => title, 'data-lightbox' => basename})
       link_to(image_tag(thumb), url_options, html_options)
     end
 
