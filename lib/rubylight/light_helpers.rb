@@ -5,7 +5,8 @@ module Rubylight
       if collection
         rel << "[#{collection}]"
       end
-      html_options.merge!({:title => title,  'data-lightbox' => pic})
+      title ? name = title : name = basename
+      html_options.merge!({:title => title, 'data-lightbox' => name})
       link_to(image_tag(thumb), pic, html_options,)
     end
 
@@ -14,7 +15,8 @@ module Rubylight
       if collection
         rel << "[#{collection}]"
       end
-      html_options.merge!({:title => title, 'data-lightbox' => basename})
+      title ? name = title : name = basename
+      html_options.merge!({:title => title, 'data-lightbox' => name})
       link_to(image_tag(thumb), url_options, html_options)
     end
 
